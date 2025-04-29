@@ -7,11 +7,34 @@ type User struct {
 	Age int
 }
 
-func main(){
-	var user1 User
+func printUserDetails (usr User) {
+	fmt.Println(usr.Name)
+	fmt.Println(usr.Age)
+}
 
-	user1 = User{ // instantiate
+// receiver function only work in custom type
+func (usr User) printUser () {
+	fmt.Println(usr.Name)
+	fmt.Println(usr.Age)
+}
+
+func (usr User) call(a int) {
+	fmt.Println(usr.Name)
+	fmt.Println(a)
+}
+
+
+
+func main(){
+
+
+	user1 := User{ // instantiate
 		Name: "Habib",
-		Age: 32
+		Age: 32,
 	}
+
+	// printUserDetails(user1)
+
+	user1.printUser()
+	user1.call(10)
 }
