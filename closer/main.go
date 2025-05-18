@@ -2,8 +2,6 @@ package main
 
 import "fmt"
 
-
-
 /*
 
 1. code segment --> function
@@ -14,13 +12,13 @@ import "fmt"
 ## stack (local) memory is faster than global memory
 ## GC -- garbage collertor
 
+A closur is a function defined within onother functuin and has access to the outer function's variables even after the outer function has finished executing
+
+
 */
 
- 
-
 const a = 10 // constant
-var p = 100 // run time
-
+var p = 100  // run time
 
 func outer() func() {
 	money := 100
@@ -35,26 +33,23 @@ func outer() func() {
 }
 
 func call() {
-	inc1 := outer();
-	inc1();
-	inc1();
+	inc1 := outer()
+	inc1()
+	inc1()
 
-
-	inc2 := outer();
+	inc2 := outer()
 	inc2()
 	inc2()
 }
 
-func main(){
+func main() {
 	call()
 	fmt.Println("call from main func", a)
 }
 
-
-func init(){
+func init() {
 	fmt.Println("run  from init func")
 }
-
 
 /*
 
