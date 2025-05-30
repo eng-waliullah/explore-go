@@ -17,6 +17,8 @@ A closur is a function defined within onother functuin and has access to the out
 
 */
 
+// stack frame is automatic cleanup
+
 const a = 10 // constant
 var p = 100  // run time
 
@@ -30,6 +32,7 @@ func outer() func() {
 		fmt.Println(money)
 	}
 	return show
+
 }
 
 func call() {
