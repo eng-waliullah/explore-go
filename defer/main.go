@@ -2,6 +2,10 @@
 
 // parent & closer jodi exists kore tahole closer variable ar address refer share kore
 
+// defer list pointer
+
+// defer --> linked list data stracture use kore
+
 /*
 
 named returned values rules
@@ -58,11 +62,23 @@ func calculate() (result int) {
 
 	result = 5
 
+	p := func(a int) {
+		fmt.Println("ami", a)
+	}
+
+	defer p(result)
+
+	defer fmt.Println(result)
+
 	fmt.Println("second ", result)
+
+	defer fmt.Println(5)
 
 	return
 
 }
+
+/*
 
 func calc() int {
 
@@ -84,12 +100,14 @@ func calc() int {
 
 }
 
+*/
+
 func main() {
 
 	a := calculate()
 	fmt.Println("main first", a)
 
-	b := calc()
-	fmt.Println("main second", b)
+	// b := calc()
+	// fmt.Println("main second", b)
 
 }
