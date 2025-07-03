@@ -9,7 +9,7 @@ var b = 30
 
 1. code segment --> function
 2. data segment --> global memory
-3. stack --> execution time --> stacl frame
+3. stack --> execution time --> stacl frame/ function frame
 4. heap
 
 ## stack (local) memory is faster than global memory
@@ -17,15 +17,13 @@ var b = 30
 
 */
 
-
-
-func add(x int, y int){
- 	var z = x + y
+func add(x int, y int) {
+	var z = x + y
 
 	fmt.Println(z)
 }
 
-func main(){
+func main() {
 	// var p = 30
 	// var q = 40
 
@@ -34,6 +32,6 @@ func main(){
 
 }
 
-func init(){
+func init() {
 	fmt.Println("from init func")
 }
