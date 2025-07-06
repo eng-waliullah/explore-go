@@ -62,25 +62,23 @@ func calculate() (result int) {
 
 	result = 5
 
-	p := func(a int) {
-		fmt.Println("ami", a)
-	}
+	// p := func(a int) {
+	// 	fmt.Println("ami", a)
+	// }
 
-	defer p(result)
+	// defer p(result)
 
-	defer fmt.Println(result)
+	// defer fmt.Println(result)
 
 	fmt.Println("second ", result)
 
-	defer fmt.Println(5)
+	// defer fmt.Println(5)
 
 	return
 
 }
 
-/*
-
-func calc() int {
+func calc() (res int) {
 
 	result := 0
 
@@ -100,14 +98,12 @@ func calc() int {
 
 }
 
-*/
-
 func main() {
 
-	a := calculate()
-	fmt.Println("main first", a)
+	// a := calculate()
+	// fmt.Println("main first", a)
 
-	// b := calc()
-	// fmt.Println("main second", b)
+	b := calc()
+	fmt.Println("main second", b)
 
 }

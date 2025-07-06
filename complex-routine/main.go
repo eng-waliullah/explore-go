@@ -17,7 +17,9 @@ package main
 2. Heap Allocator (K initialize kore )
 3. Garbage Collertor
 4. Logical Processors Create kore
-5.
+5. ami go routine handle korar khomota raki... ar GO-RUNTIME OS THREAD handle korte pare
+6. GO-RUNTIME kintu logical processor
+7. akon jodi 100
 
 
 ## code execute kore akmatro CPU
@@ -36,7 +38,7 @@ var a = 10
 const p = 11
 
 func printHello(num int) {
-	time.Sleep(5 * time.Second)
+	time.Sleep(2 * time.Second)
 	fmt.Println("Hello Habiba", "--", num)
 }
 

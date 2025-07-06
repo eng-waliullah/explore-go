@@ -11,7 +11,11 @@ func main() {
 
 	var d float64 = 20.90343453
 
-	var e bool = true
+	var e bool = true // 8 bits/ 1 buty
+
+	// byte -> alias for unit8 -> 8 bits -> 1 byte
+
+	// rune -> alias for init32 (unicode point) -> 32 bits -> 4 bytes -> rune ar format holo: %c (without english any charactar)
 
 	var s string = "ha"
 
